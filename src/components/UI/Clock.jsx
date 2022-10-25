@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
+import '../../styles/clock.css';
+
 const Clock = () => {
-    const [days, setDays] = useState();
-    const [hours, setHours] = useState();
-    const [minutes, setMinutes] = useState();
-    const [seconds, setSeconds] = useState();
+    const [days, setDays] = useState('0');
+    const [hours, setHours] = useState('0');
+    const [minutes, setMinutes] = useState('0');
+    const [seconds, setSeconds] = useState('0');
 
     let interval;
 
     const countDown = () => {
-        const destination = new Date('Oct 25, 2022').getTime();
+        const destination = new Date('Oct 26, 2022').getTime();
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -22,19 +24,19 @@ const Clock = () => {
 
             const seconds = Math.floor((different % (1000 * 60)) / 1000);
 
-            if (destination < 0) clearInterval(interval.current);
+            if (seconds < 0) clearInterval(interval);
             else {
                 setDays(days);
                 setHours(hours);
                 setMinutes(minutes);
                 setSeconds(seconds);
             }
-        });
+        }, 1000);
     };
 
     useEffect(() => {
         countDown();
-    });
+    }, []);
 
     return (
         <div className="clock__wrapper d-flex alig-items-center gap-3">
