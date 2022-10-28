@@ -25,7 +25,7 @@ const Footer = () => {
                     <Col lg="3" md="3" className="mb-4">
                         <div className="footer__quick-links">
                             <h4 className="quick__links-title">Top Categories</h4>
-                            <ListGroup className="mb-3">
+                            <ListGroup className="quick_links-list mb-3">
                                 <ListGroupItem className="ps-0 border-0">
                                     <Link to="#">Mobile Phones</Link>
                                 </ListGroupItem>
@@ -48,7 +48,7 @@ const Footer = () => {
                     <Col lg="2" md="3" className="mb-4">
                         <div className="footer__quick-links">
                             <h4 className="quick__links-title">Useful Links</h4>
-                            <ListGroup className="mb-3">
+                            <ListGroup className="quick_links-list mb-3">
                                 <ListGroupItem className="ps-0 border-0">
                                     <Link to="#">Shop</Link>
                                 </ListGroupItem>
@@ -71,7 +71,7 @@ const Footer = () => {
                     <Col lg="3" md="4">
                         <div className="footer__quick-links">
                             <h4 className="quick__links-title">Contact</h4>
-                            <ListGroup className="footer__contact">
+                            <ListGroup className="quick_links-list footer__contact">
                                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                                     <span>
                                         <i className="ri-map-pin-line"></i>

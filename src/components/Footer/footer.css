@@ -23,6 +23,10 @@
     font-size: 1.1rem;
 }
 
+.quick_links-list {
+    margin-top: -16px;
+}
+
 .footer__contact li span,
 .footer__contact li p {
     color: rgba(255, 255, 255, 0.75);
